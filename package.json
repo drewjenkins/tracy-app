@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "html-webpack-plugin": "^5.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tailwindcss": "^3.0.23",
@@ -27,6 +26,12 @@
     "@types/react-dom": "^17.0.11",
     "@types/tailwindcss": "^3.0.8",
     "@webpack-cli/generators": "^2.4.2",
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.6",
+    "postcss-loader": "^6.2.1",
+    "style-loader": "^3.3.1",
     "ts-loader": "^9.2.6",
     "webpack-dev-server": "^4.7.4",
     "workbox-webpack-plugin": "^6.4.2"
