@@ -1,10 +1,15 @@
-import { UniversalSlice, createUniversalSlice } from './universalSlice';
+import { UniversalSlice, universalSlice } from './universalSlice';
 import create from 'zustand';
 import debounce from 'lodash/debounce';
+import { withLenses } from '@dhmk/zustand-lens';
 
-const store = create<UniversalSlice>()(
-  (setState, getState, storeAPI, storeMutations) => ({
-    ...createUniversalSlice(setState, getState, storeAPI, storeMutations),
+export type Store = {
+  universalSlice: UniversalSlice;
+};
+
+const store = create<Store>(
+  withLenses({
+    universalSlice,
   })
 );
 

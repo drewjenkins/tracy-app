@@ -7,11 +7,9 @@ import useStore from './store/store';
 type AppProps = {};
 
 const App = (props: AppProps) => {
-  const [foo, useFoo] = React.useState();
-  React.useEffect(() => {}, []);
-  const store = useStore();
+  const foo = useStore((s) => s.universalSlice.foo);
 
-  return <div className="text-cyan-400">Hey Tracy!</div>;
+  return <div className="text-cyan-400">{foo}</div>;
 };
 
 export default App;

@@ -1,14 +1,9 @@
-import create, { StateCreator } from 'zustand';
+import { lens } from '@dhmk/zustand-lens';
 
 export interface UniversalSlice {
   foo: string;
 }
 
-export const createUniversalSlice: StateCreator<
-  UniversalSlice,
-  [],
-  [],
-  UniversalSlice
-> = (setState, getState) => ({
+export const universalSlice: UniversalSlice = lens((setState, getState) => ({
   foo: 'bar',
-});
+}));
